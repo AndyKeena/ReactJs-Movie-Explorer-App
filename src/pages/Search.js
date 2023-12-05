@@ -1,9 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import {allMovies} from '../components/MovieList';
 import {MovieListContainer, MovieListStyle, input} from "../styles";
+import {useNavigate} from "react-router-dom";
 
 
 const Search = () => {
+
+    const navigate = useNavigate();
+    const navigateToDetails=(id)=>{
+        navigate(
+            '/details',
+            {
+                state: {
+                    id:id
+                }
+            }
+        )
+
+    }
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState([]);
 
@@ -36,7 +50,7 @@ const Search = () => {
 
             <MovieListContainer>
                 {searchResults.map((movie) => (
-                    <MovieListStyle key={movie.id}>
+                    <MovieListStyle key={movie.id} onClick={()=>navigateToDetails(movie.id)}>
                         <img src={movie.image} alt={movie.title}/>
                         <h3>{movie.title}</h3>
                         <p>{movie.releaseYear}</p>
