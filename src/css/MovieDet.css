@@ -1,0 +1,22 @@
+h1.title{
+    padding-top: 50px;
+    text-align: center;
+    font-family: "Times New Roman", cursive;
+    font-size: 40px;
+}
+
+img.movieDetails{
+    width: 15%;
+    height: 15%;
+    padding: 50px;
+
+}
+
+p.movieDetails{
+    text-align: justify;
+    padding-left: 200px;
+    padding-right: 200px;
+    font-size: 19px;
+    font-family: "Times New Roman", cursive;
+
+}
