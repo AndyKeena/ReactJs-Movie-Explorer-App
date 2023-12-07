@@ -1,3 +1,4 @@
+import '../css/MovieDet.css'
 
 export const moviesPopular= [
     { id: 1, title: 'Percy Jackson & the Olympians: The Lightning Thief' , releaseYear: '2010', image: '/images/image1.jpeg' },
@@ -88,34 +89,6 @@ export const allMovieDescription=[
 
 
 
-
-
-
-/* <div>
-     <MovieListContainer>
-         {moviesPopular.map((movie) => (
-             <Link to={`/movie/${movie.id}`} key={movie.id}>
-                 <MovieListStyle>
-                     <img src={movie.image} alt={movie.title} />
-                     <h3>{movie.title}</h3>
-                     <p>{movie.releaseYear}</p>
-                 </MovieListStyle>
-             </Link>
-         ))}
-     </MovieListContainer>
-{
-     <MovieListContainer>
-         {topRatedMovies.map((movie) => (
-             <Link to={`/movie/${movie.id}`} key={movie.id}>
-                 <MovieListStyle>
-                     <img src={movie.image} alt={movie.title} />
-                     <h3>{movie.title}</h3>
-                     <p>{movie.releaseYear}</p>
-                 </MovieListStyle>
-             </Link>
-         ))}
-     </MovieListContainer>}
- </div>*/
 
 
 

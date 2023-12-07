@@ -1,5 +1,4 @@
 import React from 'react';
-import { HeaderStyle, MovieDetailStyle } from '../styles';
 import {useLocation} from "react-router-dom";
 import {allMovieDescription} from '../components/MovieList';
 import '../css/MovieDet.css'
@@ -13,10 +12,6 @@ const MovieDetail = ({ movie }) => {
   }
   return (
       <>
-          <HeaderStyle>
-
-          </HeaderStyle>
-
           <h1 class = 'title'>{selectedMovie.title}</h1>
           <center><img class = 'movieDetails' src={selectedMovie.image} alt={selectedMovie.title }/></center>
           <p class = 'movieDetails'>{selectedMovie.description}</p>

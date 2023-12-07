@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { MovieListStyle, MovieListContainer } from '../styles'; // Import the styles
+import React from 'react';
+import { MovieListStyle, MovieListContainer } from 'react';
 import {topRatedMovies} from "../components/MovieList";
 import {useNavigate} from "react-router-dom";
-
+import  "../css/MovieDet.css"
 
 const TopRated = () => {
 
@@ -22,15 +22,15 @@ const TopRated = () => {
     return (
         <div>
             <h2><center>Top Rated Movies</center></h2>
-            <MovieListContainer>
+            <div  className="movie-container">
                 {topRatedMovies.map((movie) => (
-                    <MovieListStyle key={movie.id}onClick={()=>navigateToDetails(movie.id)}>
+                    <div class = "movie-card" key={movie.id}onClick={()=>navigateToDetails(movie.id)}>
                         <img src={movie.image} alt={movie.title} />
                         <h3>{movie.title}</h3>
                         <p>{movie.releaseYear}</p>
-                    </MovieListStyle>
+                    </div>
                 ))}
-            </MovieListContainer>
+            </div>
         </div>
     );
 };

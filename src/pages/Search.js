@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {allMovies} from '../components/MovieList';
-import {MovieListContainer, MovieListStyle, input} from "../styles";
 import {useNavigate} from "react-router-dom";
-
+import '../css/MovieDet.css'
 
 const Search = () => {
 
@@ -39,26 +38,26 @@ const Search = () => {
 
     return (
         <div>
-           <center> <h2>Search Movies</h2>
-            <input
-                type="text"
-                placeholder="Search movies..."
-                value={searchQuery}
-                onChange={handleSearchChange}
-            />
-           </center>
+            <div className="center-container">
+                <h2>Search Movies</h2>
+                <input
+                    type="text"
+                    placeholder="Search movies..."
+                    value={searchQuery}
+                    onChange={handleSearchChange}
+                />
+            </div>
 
-            <MovieListContainer>
+            <div className="movie-container">
                 {searchResults.map((movie) => (
-                    <MovieListStyle key={movie.id} onClick={()=>navigateToDetails(movie.id)}>
-                        <img src={movie.image} alt={movie.title}/>
+                    <div className="movie-card" key={movie.id} onClick={() => navigateToDetails(movie.id)}>
+                        <img src={movie.image} alt={movie.title} />
                         <h3>{movie.title}</h3>
                         <p>{movie.releaseYear}</p>
-                    </MovieListStyle>
+                    </div>
                 ))}
-            </MovieListContainer>
+            </div>
         </div>
     );
-};
-
+    }
 export default Search;
