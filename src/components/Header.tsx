@@ -8,13 +8,13 @@ const Header = () => {
 
     return (
         <div class = "home">
-         <h1>Movie Explorer App</h1>
-          <nav>
-            <Link to = "/">Home</Link>
-            <Link to = "/top-rated">Top Rated</Link>
-            <Link to = "/search">Search</Link>
-          </nav>
+            <h1>Movie Explorer App</h1>
+    <nav>
+    <Link to = "/">Home</Link>
+        <Link to = "/top-rated">Top Rated</Link>
+    <Link to = "/search">Search</Link>
+        </nav>
         </div>
-      );
-}      
+);
+}
 export default Header;
