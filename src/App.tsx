@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import TopRated from './pages/TopRated';
 import Search from './pages/Search';
 import MovieDetail from "./components/MovieDetails";
-
+import App from "/App";
 const App = () => {
     return (
         <Router>
