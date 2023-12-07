@@ -70,6 +70,7 @@ p.movieDetails{
         text-align: center;
         font-family: "Times New Roman", cursive;
         height: 400px;
+        cursor: pointer;
 }
 
 .movie-card img{
